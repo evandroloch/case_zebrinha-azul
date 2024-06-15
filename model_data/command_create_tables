@@ -1,0 +1,25 @@
+create database case_dnc:
+\c case_dnc
+CREATE TABLE rota_trafego (
+    id SERIAL PRIMARY KEY,
+    rota VARCHAR(255) NOT NULL,
+    cidade VARCHAR(255) NOT NULL,
+    latitude DECIMAL(9,6) NOT NULL,
+    longitude DECIMAL(9,6) NOT NULL,
+    duracao_do_percusso INTERVAL NOT NULL
+);
+ CREATE TABLE tempo_cidades (
+    id SERIAL PRIMARY KEY,
+    cidade VARCHAR(255) NOT NULL,
+    pais CHAR(2) NOT NULL,
+    data TIMESTAMP NOT NULL,
+    temperatura NUMERIC(5, 2) NOT NULL,
+    sensacao_termica NUMERIC(5, 2) NOT NULL,
+    temperatura_minima NUMERIC(5, 2) NOT NULL,
+    temperatura_maxima NUMERIC(5, 2) NOT NULL,
+    pressao INT NOT NULL,
+    humidade INT NOT NULL,
+    visual VARCHAR(255) NOT NULL,
+    velocidade_vento NUMERIC(5, 2) NOT NULL,
+    direcao_vento INT NOT NULL
+);

@@ -1,0 +1,15 @@
+openweather:
+  api_key: "your_api_key"
+  base_url: "http://api.openweathermap.org/data/2.5/forecast"
+
+google_maps:
+  api_key: "your_api_key"
+  base_url_directions: "https://maps.googleapis.com/maps/api/directions/json"
+  base_url_geocode: "https://maps.googleapis.com/maps/api/geocode/json"
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  database: "case_dnc"
