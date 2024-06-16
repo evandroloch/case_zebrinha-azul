@@ -1,0 +1,24 @@
+[2024-06-04T23:48:54.536+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: example_trigger_target_dag.run_this manual__2024-06-04T23:48:53.115410+00:00 [queued]>
+[2024-06-04T23:48:54.555+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: example_trigger_target_dag.run_this manual__2024-06-04T23:48:53.115410+00:00 [queued]>
+[2024-06-04T23:48:54.556+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-04T23:48:54.556+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-06-04T23:48:54.556+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-04T23:48:54.577+0000] {taskinstance.py:1300} INFO - Executing <Task(_PythonDecoratedOperator): run_this> on 2024-06-04 23:48:53.115410+00:00
+[2024-06-04T23:48:54.586+0000] {standard_task_runner.py:55} INFO - Started process 4738 to run task
+[2024-06-04T23:48:54.590+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'example_trigger_target_dag', 'run_this', 'manual__2024-06-04T23:48:53.115410+00:00', '--job-id', '1625', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_trigger_target_dag.py', '--cfg-path', '/tmp/tmpdi2gbosz']
+[2024-06-04T23:48:54.590+0000] {standard_task_runner.py:83} INFO - Job 1625: Subtask run_this
+[2024-06-04T23:48:54.691+0000] {task_command.py:388} INFO - Running <TaskInstance: example_trigger_target_dag.run_this manual__2024-06-04T23:48:53.115410+00:00 [running]> on host 27113cccce1f
+[2024-06-04T23:48:54.815+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_trigger_target_dag
+AIRFLOW_CTX_TASK_ID=run_this
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-04T23:48:53.115410+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-04T23:48:53.115410+00:00
+[2024-06-04T23:48:54.816+0000] {logging_mixin.py:137} INFO - Remotely received value of Hello World for key=message
+[2024-06-04T23:48:54.816+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-06-04T23:48:54.829+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=example_trigger_target_dag, task_id=run_this, execution_date=20240604T234853, start_date=20240604T234854, end_date=20240604T234854
+[2024-06-04T23:48:54.892+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-06-04T23:48:54.998+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

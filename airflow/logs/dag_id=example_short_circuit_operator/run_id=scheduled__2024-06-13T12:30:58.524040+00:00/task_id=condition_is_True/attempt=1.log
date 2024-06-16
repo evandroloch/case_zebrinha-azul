@@ -1,0 +1,25 @@
+[2024-06-14T12:31:02.456+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: example_short_circuit_operator.condition_is_True scheduled__2024-06-13T12:30:58.524040+00:00 [queued]>
+[2024-06-14T12:31:02.470+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: example_short_circuit_operator.condition_is_True scheduled__2024-06-13T12:30:58.524040+00:00 [queued]>
+[2024-06-14T12:31:02.470+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-14T12:31:02.470+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-06-14T12:31:02.470+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-14T12:31:02.501+0000] {taskinstance.py:1300} INFO - Executing <Task(ShortCircuitOperator): condition_is_True> on 2024-06-13 12:30:58.524040+00:00
+[2024-06-14T12:31:02.516+0000] {standard_task_runner.py:55} INFO - Started process 365 to run task
+[2024-06-14T12:31:02.523+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'example_short_circuit_operator', 'condition_is_True', 'scheduled__2024-06-13T12:30:58.524040+00:00', '--job-id', '24579', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_short_circuit_operator.py', '--cfg-path', '/tmp/tmpb00_mvgz']
+[2024-06-14T12:31:02.523+0000] {standard_task_runner.py:83} INFO - Job 24579: Subtask condition_is_True
+[2024-06-14T12:31:02.641+0000] {task_command.py:388} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_True scheduled__2024-06-13T12:30:58.524040+00:00 [running]> on host 27113cccce1f
+[2024-06-14T12:31:02.753+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_short_circuit_operator
+AIRFLOW_CTX_TASK_ID=condition_is_True
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-13T12:30:58.524040+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-13T12:30:58.524040+00:00
+[2024-06-14T12:31:02.754+0000] {python.py:177} INFO - Done. Returned value was: True
+[2024-06-14T12:31:02.756+0000] {python.py:248} INFO - Condition result is True
+[2024-06-14T12:31:02.756+0000] {python.py:251} INFO - Proceeding with downstream tasks...
+[2024-06-14T12:31:02.788+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=example_short_circuit_operator, task_id=condition_is_True, execution_date=20240613T123058, start_date=20240614T123102, end_date=20240614T123102
+[2024-06-14T12:31:02.831+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-06-14T12:31:02.974+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

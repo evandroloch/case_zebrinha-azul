@@ -1,0 +1,138 @@
+[2024-06-16T01:48:05.712+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:48:05.721+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:48:05.721+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:48:05.721+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-06-16T01:48:05.721+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:48:05.747+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): fetch_and_save_data> on 2023-01-13 00:00:00+00:00
+[2024-06-16T01:48:05.765+0000] {standard_task_runner.py:55} INFO - Started process 290 to run task
+[2024-06-16T01:48:05.768+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'fetch_and_save_data', 'scheduled__2023-01-13T00:00:00+00:00', '--job-id', '32066', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmpvtqml37p']
+[2024-06-16T01:48:05.768+0000] {standard_task_runner.py:83} INFO - Job 32066: Subtask fetch_and_save_data
+[2024-06-16T01:48:05.825+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [running]> on host 74f2b0340b57
+[2024-06-16T01:48:05.898+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=fetch_and_save_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-13T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-13T00:00:00+00:00
+[2024-06-16T01:48:05.900+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/process_data.py", line 34, in fetch_and_save_data
+    config = import_config()
+  File "/opt/airflow/dags/process_data.py", line 17, in import_config
+    with open('/home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml', 'r') as config:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml'
+[2024-06-16T01:48:05.906+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=process_data_dag, task_id=fetch_and_save_data, execution_date=20230113T000000, start_date=20240616T014805, end_date=20240616T014805
+[2024-06-16T01:48:05.917+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 32066 for task fetch_and_save_data ([Errno 2] No such file or directory: '/home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml'; 290)
+[2024-06-16T01:48:05.939+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-06-16T01:48:05.959+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-16T01:50:19.721+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:50:19.728+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:50:19.728+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:50:19.728+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-06-16T01:50:19.728+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:50:19.738+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): fetch_and_save_data> on 2023-01-13 00:00:00+00:00
+[2024-06-16T01:50:19.746+0000] {standard_task_runner.py:55} INFO - Started process 622 to run task
+[2024-06-16T01:50:19.748+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'fetch_and_save_data', 'scheduled__2023-01-13T00:00:00+00:00', '--job-id', '32092', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmplhdednjx']
+[2024-06-16T01:50:19.749+0000] {standard_task_runner.py:83} INFO - Job 32092: Subtask fetch_and_save_data
+[2024-06-16T01:50:19.796+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [running]> on host 74f2b0340b57
+[2024-06-16T01:50:19.853+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=fetch_and_save_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-13T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-13T00:00:00+00:00
+[2024-06-16T01:50:19.855+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/process_data.py", line 34, in fetch_and_save_data
+    config = import_config()
+  File "/opt/airflow/dags/process_data.py", line 17, in import_config
+    with open('home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml', 'r') as config:
+FileNotFoundError: [Errno 2] No such file or directory: 'home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml'
+[2024-06-16T01:50:19.862+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=process_data_dag, task_id=fetch_and_save_data, execution_date=20230113T000000, start_date=20240616T015019, end_date=20240616T015019
+[2024-06-16T01:50:19.871+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 32092 for task fetch_and_save_data ([Errno 2] No such file or directory: 'home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml'; 622)
+[2024-06-16T01:50:19.920+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-06-16T01:50:19.939+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-16T01:52:28.751+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:52:28.757+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:52:28.757+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:52:28.757+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-06-16T01:52:28.758+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:52:28.769+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): fetch_and_save_data> on 2023-01-13 00:00:00+00:00
+[2024-06-16T01:52:28.776+0000] {standard_task_runner.py:55} INFO - Started process 957 to run task
+[2024-06-16T01:52:28.780+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'fetch_and_save_data', 'scheduled__2023-01-13T00:00:00+00:00', '--job-id', '32119', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmp4m0mmq_b']
+[2024-06-16T01:52:28.780+0000] {standard_task_runner.py:83} INFO - Job 32119: Subtask fetch_and_save_data
+[2024-06-16T01:52:28.827+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [running]> on host 74f2b0340b57
+[2024-06-16T01:52:28.889+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=fetch_and_save_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-13T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-13T00:00:00+00:00
+[2024-06-16T01:52:28.890+0000] {logging_mixin.py:137} INFO - /opt/***
+[2024-06-16T01:52:28.890+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/process_data.py", line 35, in fetch_and_save_data
+    config = import_config()
+  File "/opt/airflow/dags/process_data.py", line 18, in import_config
+    with open('home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml', 'r') as config:
+FileNotFoundError: [Errno 2] No such file or directory: 'home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml'
+[2024-06-16T01:52:28.897+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=process_data_dag, task_id=fetch_and_save_data, execution_date=20230113T000000, start_date=20240616T015228, end_date=20240616T015228
+[2024-06-16T01:52:28.907+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 32119 for task fetch_and_save_data ([Errno 2] No such file or directory: 'home/evandro/Área de trabalho/case/case_zebrinha-azul/config/config.yaml'; 957)
+[2024-06-16T01:52:28.950+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-06-16T01:52:28.971+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-16T01:54:50.573+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:54:50.580+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-06-16T01:54:50.580+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:54:50.580+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-06-16T01:54:50.580+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T01:54:50.590+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): fetch_and_save_data> on 2023-01-13 00:00:00+00:00
+[2024-06-16T01:54:50.599+0000] {standard_task_runner.py:55} INFO - Started process 1337 to run task
+[2024-06-16T01:54:50.601+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'fetch_and_save_data', 'scheduled__2023-01-13T00:00:00+00:00', '--job-id', '32145', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmpg4cxpjkb']
+[2024-06-16T01:54:50.601+0000] {standard_task_runner.py:83} INFO - Job 32145: Subtask fetch_and_save_data
+[2024-06-16T01:54:50.651+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.fetch_and_save_data scheduled__2023-01-13T00:00:00+00:00 [running]> on host 74f2b0340b57
+[2024-06-16T01:54:50.708+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=fetch_and_save_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-13T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-13T00:00:00+00:00
+[2024-06-16T01:54:50.710+0000] {logging_mixin.py:137} INFO - /opt/***
+[2024-06-16T01:54:50.710+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/process_data.py", line 35, in fetch_and_save_data
+    config = import_config()
+  File "/opt/airflow/dags/process_data.py", line 18, in import_config
+    with open('config/config.yaml', 'r') as config:
+FileNotFoundError: [Errno 2] No such file or directory: 'config/config.yaml'
+[2024-06-16T01:54:50.717+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=process_data_dag, task_id=fetch_and_save_data, execution_date=20230113T000000, start_date=20240616T015450, end_date=20240616T015450
+[2024-06-16T01:54:50.726+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 32145 for task fetch_and_save_data ([Errno 2] No such file or directory: 'config/config.yaml'; 1337)
+[2024-06-16T01:54:50.772+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-06-16T01:54:50.798+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

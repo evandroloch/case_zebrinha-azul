@@ -1,0 +1,26 @@
+[2024-06-08T16:48:10.316+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: latest_only.latest_only scheduled__2024-06-08T12:47:57.998544+00:00 [queued]>
+[2024-06-08T16:48:10.326+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: latest_only.latest_only scheduled__2024-06-08T12:47:57.998544+00:00 [queued]>
+[2024-06-08T16:48:10.326+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-08T16:48:10.326+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-06-08T16:48:10.326+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-08T16:48:10.340+0000] {taskinstance.py:1300} INFO - Executing <Task(LatestOnlyOperator): latest_only> on 2024-06-08 12:47:57.998544+00:00
+[2024-06-08T16:48:10.347+0000] {standard_task_runner.py:55} INFO - Started process 420 to run task
+[2024-06-08T16:48:10.350+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'latest_only', 'latest_only', 'scheduled__2024-06-08T12:47:57.998544+00:00', '--job-id', '11813', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_latest_only.py', '--cfg-path', '/tmp/tmpeyo8mdru']
+[2024-06-08T16:48:10.350+0000] {standard_task_runner.py:83} INFO - Job 11813: Subtask latest_only
+[2024-06-08T16:48:10.402+0000] {task_command.py:388} INFO - Running <TaskInstance: latest_only.latest_only scheduled__2024-06-08T12:47:57.998544+00:00 [running]> on host 27113cccce1f
+[2024-06-08T16:48:10.460+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=latest_only
+AIRFLOW_CTX_TASK_ID=latest_only
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-08T12:47:57.998544+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-08T12:47:57.998544+00:00
+[2024-06-08T16:48:10.461+0000] {latest_only.py:70} INFO - Checking latest only with left_window: 2024-06-08T16:47:57.998544+00:00 right_window: 2024-06-08T20:47:57.998544+00:00 now: 2024-06-08T16:48:10.461488+00:00
+[2024-06-08T16:48:10.461+0000] {latest_only.py:79} INFO - Latest, allowing execution to proceed.
+[2024-06-08T16:48:10.461+0000] {skipmixin.py:155} INFO - Following branch ['task1']
+[2024-06-08T16:48:10.462+0000] {skipmixin.py:211} INFO - Skipping tasks []
+[2024-06-08T16:48:10.502+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=latest_only, task_id=latest_only, execution_date=20240608T124757, start_date=20240608T164810, end_date=20240608T164810
+[2024-06-08T16:48:10.561+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-06-08T16:48:10.590+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2024-06-16T14:04:20.386+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.run_dash_app manual__2024-06-16T14:03:46+00:00 [queued]>
+[2024-06-16T14:04:20.392+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.run_dash_app manual__2024-06-16T14:03:46+00:00 [queued]>
+[2024-06-16T14:04:20.392+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T14:04:20.392+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-06-16T14:04:20.392+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T14:04:20.401+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_dash_app> on 2024-06-16 14:03:46+00:00
+[2024-06-16T14:04:20.408+0000] {standard_task_runner.py:55} INFO - Started process 1713 to run task
+[2024-06-16T14:04:20.410+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'run_dash_app', 'manual__2024-06-16T14:03:46+00:00', '--job-id', '33267', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmp7mo8_mrt']
+[2024-06-16T14:04:20.411+0000] {standard_task_runner.py:83} INFO - Job 33267: Subtask run_dash_app
+[2024-06-16T14:04:20.452+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.run_dash_app manual__2024-06-16T14:03:46+00:00 [running]> on host 01364b699017
+[2024-06-16T14:04:20.500+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=run_dash_app
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-16T14:03:46+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-16T14:03:46+00:00
+[2024-06-16T14:04:20.547+0000] {logging_mixin.py:137} INFO - Dash is running on http://127.0.0.1:8050/
+[2024-06-16T14:04:20.547+0000] {dash.py:2053} INFO - Dash is running on http://127.0.0.1:8050/
+
+[2024-06-16T14:04:20.555+0000] {logging_mixin.py:137} INFO -  * Serving Flask app 'unusual_prefix_5df1dcf864832a9430adca10c12b79147e2a729f_process_data'
+[2024-06-16T14:04:20.556+0000] {logging_mixin.py:137} INFO -  * Debug mode: on
+[2024-06-16T14:04:27.957+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-06-16T14:04:27.969+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

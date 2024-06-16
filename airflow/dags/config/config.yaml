@@ -1,0 +1,15 @@
+openweather:
+  api_key: "8234cf953a4c3629cc03c893c030e09a"
+  base_url: "http://api.openweathermap.org/data/2.5/forecast"
+
+google_maps:
+  api_key: "AIzaSyB4dE6nOmOyKrUlO_HGJmZMctpA7mkxUYw"
+  base_url_directions: "https://maps.googleapis.com/maps/api/directions/json"
+  base_url_geocode: "https://maps.googleapis.com/maps/api/geocode/json"
+
+database:
+  host: "postgres"
+  port: 5432
+  user: "airflow"
+  password: "airflow"
+  database: "airflow"

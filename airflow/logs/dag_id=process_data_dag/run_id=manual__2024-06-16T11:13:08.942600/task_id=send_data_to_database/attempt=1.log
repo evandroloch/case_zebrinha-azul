@@ -1,0 +1,25 @@
+[2024-06-16T14:14:05.432+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.send_data_to_database manual__2024-06-16T11:13:08.942600 [queued]>
+[2024-06-16T14:14:05.438+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.send_data_to_database manual__2024-06-16T11:13:08.942600 [queued]>
+[2024-06-16T14:14:05.438+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T14:14:05.438+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-06-16T14:14:05.438+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T14:14:05.448+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): send_data_to_database> on 2024-06-16 14:13:09.007586+00:00
+[2024-06-16T14:14:05.456+0000] {standard_task_runner.py:55} INFO - Started process 3092 to run task
+[2024-06-16T14:14:05.458+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'send_data_to_database', 'manual__2024-06-16T11:13:08.942600', '--job-id', '33322', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmp97h3pxsk']
+[2024-06-16T14:14:05.458+0000] {standard_task_runner.py:83} INFO - Job 33322: Subtask send_data_to_database
+[2024-06-16T14:14:05.500+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.send_data_to_database manual__2024-06-16T11:13:08.942600 [running]> on host 01364b699017
+[2024-06-16T14:14:05.548+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=send_data_to_database
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-16T14:13:09.007586+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-16T11:13:08.942600
+[2024-06-16T14:14:05.619+0000] {logging_mixin.py:137} INFO - Table tempo_cidades loaded successfully
+[2024-06-16T14:14:05.625+0000] {logging_mixin.py:137} INFO - Table rota_trafego loaded successfully
+[2024-06-16T14:14:05.625+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-06-16T14:14:05.632+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=process_data_dag, task_id=send_data_to_database, execution_date=20240616T141309, start_date=20240616T141405, end_date=20240616T141405
+[2024-06-16T14:14:05.669+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-06-16T14:14:05.686+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,36 @@
+[2024-06-16T02:28:55.386+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data manual__2024-06-16T02:23:51.939198+00:00 [queued]>
+[2024-06-16T02:28:55.392+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: process_data_dag.fetch_and_save_data manual__2024-06-16T02:23:51.939198+00:00 [queued]>
+[2024-06-16T02:28:55.392+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T02:28:55.392+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-06-16T02:28:55.392+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-16T02:28:55.403+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): fetch_and_save_data> on 2024-06-16 02:23:51.939198+00:00
+[2024-06-16T02:28:55.411+0000] {standard_task_runner.py:55} INFO - Started process 3482 to run task
+[2024-06-16T02:28:55.413+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_data_dag', 'fetch_and_save_data', 'manual__2024-06-16T02:23:51.939198+00:00', '--job-id', '32348', '--raw', '--subdir', 'DAGS_FOLDER/process_data.py', '--cfg-path', '/tmp/tmpqge4pj85']
+[2024-06-16T02:28:55.413+0000] {standard_task_runner.py:83} INFO - Job 32348: Subtask fetch_and_save_data
+[2024-06-16T02:28:55.454+0000] {task_command.py:388} INFO - Running <TaskInstance: process_data_dag.fetch_and_save_data manual__2024-06-16T02:23:51.939198+00:00 [running]> on host d460cb06525f
+[2024-06-16T02:28:55.500+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_data_dag
+AIRFLOW_CTX_TASK_ID=fetch_and_save_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-16T02:23:51.939198+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-16T02:23:51.939198+00:00
+[2024-06-16T02:28:55.501+0000] {logging_mixin.py:137} INFO - /opt/***aqiode   dags|logs|webserver_config.py|plugins|***.cfg|***-worker.pid
+[2024-06-16T02:28:55.503+0000] {logging_mixin.py:137} INFO - /opt/***aqiode   dags|logs|webserver_config.py|plugins|***.cfg|***-worker.pid
+[2024-06-16T02:29:22.619+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/process_data.py", line 125, in fetch_and_save_data
+    save_data_as_json(data, '/home/evandro/Área de trabalho/case/case_zebrinha-azul/extract_data/trafic/arrive_time.json')
+  File "/opt/airflow/dags/process_data.py", line 63, in save_data_as_json
+    with open(file_path, "w") as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/evandro/Área de trabalho/case/case_zebrinha-azul/extract_data/trafic/arrive_time.json'
+[2024-06-16T02:29:22.626+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=process_data_dag, task_id=fetch_and_save_data, execution_date=20240616T022351, start_date=20240616T022855, end_date=20240616T022922
+[2024-06-16T02:29:22.635+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 32348 for task fetch_and_save_data ([Errno 2] No such file or directory: '/home/evandro/Área de trabalho/case/case_zebrinha-azul/extract_data/trafic/arrive_time.json'; 3482)
+[2024-06-16T02:29:22.648+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-06-16T02:29:22.667+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

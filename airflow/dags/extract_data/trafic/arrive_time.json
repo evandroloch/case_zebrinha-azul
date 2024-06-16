@@ -1,0 +1,79 @@
+[
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Foz do Igua\u00e7u",
+        "latitude": -25.5165101,
+        "longitude": -54.585403,
+        "duration_of_the_journey": "0:00:00"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Santa Terezinha de Itaipu",
+        "latitude": -25.4379097,
+        "longitude": -54.400291,
+        "duration_of_the_journey": "0:22:25"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Santa Tereza do Oeste",
+        "latitude": -25.0559472,
+        "longitude": -53.6219738,
+        "duration_of_the_journey": "1:39:58"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Salgado Filho",
+        "latitude": -26.1730852,
+        "longitude": -53.3619709,
+        "duration_of_the_journey": "4:11:03"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Flor da Serra do Sul",
+        "latitude": -26.2579296,
+        "longitude": -53.30899119999999,
+        "duration_of_the_journey": "4:27:40"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Maravilha - State of Santa Catarina",
+        "latitude": -26.7605988,
+        "longitude": -53.1748902,
+        "duration_of_the_journey": "6:03:02"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Carazinho",
+        "latitude": -28.2954325,
+        "longitude": -52.7976469,
+        "duration_of_the_journey": "9:39:29"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Lajeado",
+        "latitude": -29.4606371,
+        "longitude": -51.9679155,
+        "duration_of_the_journey": "12:07:31"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Nova Santa Rita",
+        "latitude": -29.8561342,
+        "longitude": -51.2740987,
+        "duration_of_the_journey": "13:16:56"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Porto Alegre",
+        "latitude": -30.036818,
+        "longitude": -51.2090371,
+        "duration_of_the_journey": "13:43:52"
+    },
+    {
+        "route": "Foz do Igua\u00e7u|Porto Alegre",
+        "city": "Porto Alegre",
+        "latitude": -30.036818,
+        "longitude": -51.2090371,
+        "duration_of_the_journey": "13:43:52"
+    }
+]
