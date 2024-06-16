@@ -12,7 +12,8 @@ Este projeto visa criar um pipeline de dados utilizando o Apache Airflow para au
 - **Tarefas**:
   1. **Pegar Parâmetros**: Obtém os parâmetros de origem e destino da rota.
   2. **Chamada das APIs**: Realiza a chamada para a API do Google Maps para obter informações da rota e, com base nos dados obtidos, faz a chamada para a API Weather para coletar dados climáticos das cidades ao longo da rota.
-  3. **Limpeza de Dados e Inserção no Banco de Dados**: Processa e limpa os dados coletados, em seguida insere no banco de dados PostgreSQL.
+  3. **Limpeza de Dados**: Processa e limpa os dados coletados.
+  4. **Inserção no Banco de Dados**: Insere os dados limpos no banco de dados PostgreSQL.
 
 ### Dashboard Interativo
 
@@ -21,7 +22,7 @@ Este projeto visa criar um pipeline de dados utilizando o Apache Airflow para au
 
 ### Trigger DAG
 
-- **Arquivo**: `trigger_dag.py` permite a execução da DAG do Airflow. Os parâmetros de origem e destino da rota serão solicitados ao usuário durante a execução.
+- **Arquivo**: `trigger_dag.py` permite a execução da DAG do Airflow. Durante a execução deste arquivo, serão solicitados os parâmetros de origem e destino da rota ao usuário.
 
 ## Configuração e Execução
 
@@ -61,3 +62,10 @@ Para executar a DAG do Apache Airflow e disparar o pipeline de dados, utilize o 
 3. **Dashboard Interativo**:
    - Execute o arquivo `view.py` para abrir o dashboard Dash e visualizar os gráficos interativos dos dados climáticos das cidades presentes na rota selecionada.
 
+## Contribuição
+
+Para contribuir com este projeto, faça um fork do repositório e envie um pull request com suas modificações. Todas as contribuições são bem-vindas para melhorar e expandir as funcionalidades do pipeline de dados e do dashboard interativo.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
