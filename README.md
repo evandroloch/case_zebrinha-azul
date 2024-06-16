@@ -1,60 +1,63 @@
+
 # Projeto de Pipeline de Dados e Dashboard Interativo
 
 ## Visão Geral
 
-Este projeto tem como objetivo criar um pipeline de dados utilizando o Apache Airflow para orquestrar tarefas que extraem dados de uma API, limpam esses dados e os inserem em um banco de dados. Além disso, um dashboard interativo é criado localmente usando a biblioteca Dash para visualização dos dados processados.
+Este projeto visa criar um pipeline de dados utilizando o Apache Airflow para automatizar o processo de coleta de informações de rotas da API do Google Maps e dados climáticos das cidades ao longo dessas rotas da API Weather. Os dados são processados e armazenados em um banco de dados PostgreSQL. Um dashboard interativo é desenvolvido utilizando a biblioteca Dash para visualização dos dados climáticos das cidades presentes na rota selecionada.
 
 ## Estrutura do Projeto
 
-### DAG do Airflow
+### DAG do Apache Airflow
 
-- **Tarefa de Extração**: Coleta dados de uma API.
-- **Tarefa de Limpeza**: Processa e limpa os dados coletados.
-- **Tarefa de Carregamento**: Insere os dados limpos em um banco de dados PostgreSQL.
+- **Tarefas**:
+  1. **Pegar Parâmetros**: Obtém os parâmetros de origem e destino da rota.
+  2. **Chamada das APIs**: Realiza a chamada para a API do Google Maps para obter informações da rota e, com base nos dados obtidos, faz a chamada para a API Weather para coletar dados climáticos das cidades ao longo da rota.
+  3. **Limpeza de Dados e Inserção no Banco de Dados**: Processa e limpa os dados coletados, em seguida insere no banco de dados PostgreSQL.
 
 ### Dashboard Interativo
 
-- **Dash**: Biblioteca utilizada para criar gráficos interativos a partir dos dados armazenados no banco de dados.
+- **Dash**: Biblioteca utilizada para criar gráficos e visualizações interativas.
+- **Arquivo**: `airflow/dags/dashboard/view.py` é responsável por configurar e executar o dashboard.
 
-## Requisitos
+### Trigger DAG
 
-- **Docker** e **Docker Compose**: Para gerenciar os serviços do Airflow e PostgreSQL.
-- **Apache Airflow**: Para orquestração do pipeline de dados.
-- **PostgreSQL**: Banco de dados para armazenar os dados processados.
-- **Dash**: Biblioteca para criação do dashboard.
-- **Plotly**: Biblioteca para gráficos interativos no Dash.
-- **SQLAlchemy**: Biblioteca para conexão com o banco de dados PostgreSQL.
-- **Pandas**: Biblioteca para manipulação de dados.
+- **Arquivo**: `trigger_dag.py` permite a execução da DAG do Airflow. Os parâmetros de origem e destino da rota serão solicitados ao usuário durante a execução.
 
 ## Configuração e Execução
 
-### 1. Docker Compose
+### Docker Compose
 
-#### Arquivo `docker-compose.yaml`
+Para iniciar os serviços do Apache Airflow e PostgreSQL em containers Docker, utilize o seguinte comando:
 
-Crie um arquivo `docker-compose.yaml` na pasta `airflow` com o conteúdo adequado para configurar os serviços do Airflow e PostgreSQL.
+```bash
+docker-compose up -d
+```
 
-#### Passos Iniciais
+O arquivo `docker-compose.yaml` contém a configuração necessária para organizar a infraestrutura e executar o pipeline de dados de forma isolada e escalável.
 
-1. Instale o Docker.
-2. Posicione o terminal na pasta `airflow` e execute o comando:
+### Dashboard Dash
 
-    ```bash
-    docker compose up -d
-    ```
-
-### 2. Disparar a DAG
-
-1. Rode o arquivo `trigger_dag.py`.
-2. Quando solicitado, insira os dados de origem da rota e destino.
-
-### 3. Dashboard
-
-Para executar o dashboard, rode o arquivo `view.py` na pasta `airflow/dags/dashboard`.
+Para iniciar o dashboard interativo, execute o seguinte comando:
 
 ```bash
 python airflow/dags/dashboard/view.py
 ```
 
-O dashboard estará disponível em `http://127.0.0.1:8050`.
+Este comando irá configurar e executar o dashboard Dash, permitindo visualizar e interagir com os gráficos de dados climáticos das cidades presentes na rota selecionada.
+
+### Execução da DAG
+
+Para executar a DAG do Apache Airflow e disparar o pipeline de dados, utilize o arquivo `trigger_dag.py`. Durante a execução deste arquivo, serão solicitados os parâmetros de origem e destino da rota ao usuário.
+
+## Execução
+
+1. **Inicialização do Ambiente**:
+   - Utilize o comando `docker-compose up -d` para iniciar os serviços do Airflow e PostgreSQL.
+
+2. **Execução da DAG**:
+   - Execute o arquivo `trigger_dag.py` com Python para disparar a execução da DAG do Airflow.
+   - Durante a execução, o código solicitará ao usuário os parâmetros de origem e destino da rota.
+
+3. **Dashboard Interativo**:
+   - Execute o arquivo `view.py` para abrir o dashboard Dash e visualizar os gráficos interativos dos dados climáticos das cidades presentes na rota selecionada.
 
