@@ -62,10 +62,4 @@ Para executar a DAG do Apache Airflow e disparar o pipeline de dados, utilize o 
 3. **Dashboard Interativo**:
    - Execute o arquivo `view.py` para abrir o dashboard Dash e visualizar os gráficos interativos dos dados climáticos das cidades presentes na rota selecionada.
 
-## Contribuição
 
-Para contribuir com este projeto, faça um fork do repositório e envie um pull request com suas modificações. Todas as contribuições são bem-vindas para melhorar e expandir as funcionalidades do pipeline de dados e do dashboard interativo.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
