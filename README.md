@@ -22,7 +22,7 @@ Este projeto visa criar um pipeline de dados utilizando o Apache Airflow para au
 
 ### Trigger DAG
 
-- **Arquivo**: `trigger_dag.py` permite a execução da DAG do Airflow. Durante a execução deste arquivo, serão solicitados os parâmetros de origem e destino da rota ao usuário.
+- **Arquivo**: `trigger_dag.py` aciona a execução da DAG do Airflow. Durante a execução deste arquivo, serão solicitados os parâmetros de origem e destino da rota ao usuário.
 
 ## Configuração e Execução
 
